@@ -1,0 +1,15 @@
+fastapi>=0.110
+uvicorn[standard]>=0.27
+python-multipart>=0.0.9
+numpy>=1.24,<2.0
+opencv-python-headless>=4.8
+Pillow>=10.0
+scikit-image>=0.22
+
+# --- AI models (optional but recommended; needs PyTorch) ---
+# Install PyTorch first from https://pytorch.org (CPU or CUDA build), then:
+# torch>=2.0
+# torchvision>=0.15
+# basicsr>=1.4.2
+# realesrgan>=0.3.0
+# gfpgan>=1.3.8
