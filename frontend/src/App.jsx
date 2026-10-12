@@ -20,6 +20,7 @@ import OptionsPanel, { DEFAULTS } from "./components/OptionsPanel.jsx";
 import CompareSlider from "./components/CompareSlider.jsx";
 import ImageToolbar from "./components/ImageToolbar.jsx";
 import HistoryBar from "./components/HistoryBar.jsx";
+import SkeletonColor from "./components/SkeletonColor.jsx";
 
 export default function App() {
   const [file, setFile] = useState(null);
@@ -205,8 +206,10 @@ export default function App() {
               </div>
             ) : (
               <div className="space-y-4">
-                {/* Visual Viewport */}
-                {result ? (
+                {/* Visual Viewport / Processing Area */}
+                {busy ? (
+                  <SkeletonColor busyStep={busyStep} />
+                ) : result ? (
                   <div className="space-y-3">
                     {/* View Controls Toolbar */}
                     <ImageToolbar
